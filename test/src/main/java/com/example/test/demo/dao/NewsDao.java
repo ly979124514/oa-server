@@ -28,7 +28,9 @@ public class NewsDao {
     	   //mysql
     	   //String sql = "select * from news where news_title = ?";
     	   //oracle
-    	   String sql = "select * from news where news_title = "+"'"+title+"'";
+    	//   String sql = "select * from news where news_title = "+"'"+title+"'";
+    	   String sql = "select * from news where title = "+"'"+title+"'";
+
 		   RowMapper<News> rowMapper = new BeanPropertyRowMapper<>(News.class);
 		   News news = new News();
 		   try

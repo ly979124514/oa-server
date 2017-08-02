@@ -37,7 +37,9 @@ public class NoticeDao {
      
      public Notice getNoticeByTitle(String title)
      {
+//    	 String sql = "select * from notice where notice_title = "+"'"+title+"'";
     	 String sql = "select * from notice where notice_title = "+"'"+title+"'";
+
     	 RowMapper<Notice> rowMapper = new BeanPropertyRowMapper<>(Notice.class);
     	 Notice notice = new Notice();
     	 try {

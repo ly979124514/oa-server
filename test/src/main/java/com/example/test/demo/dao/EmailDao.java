@@ -31,7 +31,7 @@ public class EmailDao {
 		    * 
 		    * */
 //	       String sql = "select * from email where EMAIL_TITLE = :title";
-		   String sql = "select * from email where EMAIL_TITLE = "+"'"+title+"'";
+		   String sql = "select * from email where subject = "+"'"+title+"'";
 		   RowMapper<Email> rowMapper = new BeanPropertyRowMapper<>(Email.class);
 //		   SqlParameterSource namedParameter = new MapSqlParameterSource("title",title);
 		   System.out.println(sql);

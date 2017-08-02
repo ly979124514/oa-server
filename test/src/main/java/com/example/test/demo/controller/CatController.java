@@ -74,12 +74,34 @@ public class CatController {
     	 Email email = catService.getEmailByTitle(title);
     	 if(email == null){
     		  email = new Email(); 
-    		  email.setId(0);
-    		  email.setEmailTitle("出错了！！");
-    		  email.setEmailDate("出错了！！");
-    		  email.setEmailSender("出错了！！");
-    		  email.setEmailReciever("出错了！！");
-    		  email.setEmailContent("出错了！！");
+    		  email.setContent("error!!");
+    		  email.setCopy_to_id(null);
+    		  email.setCopy_to_name(null);
+    		  email.setFile1(null);
+    		  email.setFile1FileName(null);
+    		  email.setFile1FilePath(null);
+    		  email.setFile1Flag(null);
+    		  email.setFile2(null);
+    		  email.setFile2FileName(null);
+    		  email.setFile2FilePath(null);
+    		  email.setFile2Flag(null);
+    		  email.setFile3(null);
+    		  email.setFile3FileName(null);
+    		  email.setFile3FileName(null);
+    		  email.setFile3Flag(null);
+    		  email.setFlag(null);
+    		  email.setFrom_id(null);
+    		  email.setFrom_name(null);
+    		  email.setMail_id(null);
+    		  email.setReceiptFlag(null);
+    		  email.setSecret_to_id(null);
+              email.setSecret_to_name(null);
+              email.setSend_flag(null);
+              email.setSend_time(null);
+              email.setSms_remind(null);
+              email.setSubject(null);
+              email.setTo_id(null);
+              email.setTo_name(null);
     		  return email;
     	 }
     	 else

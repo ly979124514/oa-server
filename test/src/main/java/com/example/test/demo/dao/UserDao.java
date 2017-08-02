@@ -29,7 +29,9 @@ public class UserDao {
 	   //mysql
 	  // String sql = "select * from user_info where user_name= 'liyuan1' and user_passwd='abc1'";
 	   //oracle
-	   String sql = "select * from user_info where user_name= "+"'"+name+"'"+ "and user_passwd="+"'"+passwd+"'";
+	 //  String sql = "select * from user_info where user_name= "+"'"+name+"'"+ "and user_passwd="+"'"+passwd+"'";
+	   String sql = "select * from a_pht_user where user_name="+"'"+name+"'"+ "and password="+"'"+passwd+"'";
+
 	   RowMapper<UserInfo> rowMapper = new BeanPropertyRowMapper<>(UserInfo.class);
 	   UserInfo user;
 	   try
@@ -47,7 +49,7 @@ public class UserDao {
 	   return user;
    }
    public List<UserInfo> getAllUser() {
-	   String sql = "select * from user_info";
+	   String sql = "select * from a_pht_user";
 	   List list;
 	   try {
 		System.out.println("DAO:getAllUser");
